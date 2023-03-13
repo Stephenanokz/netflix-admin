@@ -2,6 +2,7 @@ import { Visibility } from "@material-ui/icons";
 import React, { useEffect, useState } from "react";
 import "./SmallWidget.css";
 import axios from "axios";
+import { baseUrl } from "../../baseUrl";
 
 const SmallWidget = () => {
   const [newUsers, setNewUsers] = useState([]);
@@ -9,7 +10,7 @@ const SmallWidget = () => {
   useEffect(() => {
     const getNewUsers = async () => {
       try {
-        const res = await axios.get("/users?new=true", {
+        const res = await axios.get(`${baseUrl}/users?new=true`, {
           headers: {
             token:
               "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
