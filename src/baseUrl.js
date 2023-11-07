@@ -1,1 +1,1 @@
-export const baseUrl = "https://netflix-api-vb0b.onrender.com/api";
+export const baseUrl = "https://netflix-api-production-baab.up.railway.app/api";
